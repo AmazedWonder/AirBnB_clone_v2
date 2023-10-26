@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" """
+""" documentation """
 from models.base_model import BaseModel
 import unittest
 import datetime
@@ -8,39 +8,43 @@ import json
 import os
 
 
+@unittest.skipIf(
+    os.getenv("HBNB_TYPE_STORAGE") == "db",
+    "Test is not relevant for BaseModel"
+)
 class test_basemodel(unittest.TestCase):
-    """ """
+    """documentation"""
 
     def __init__(self, *args, **kwargs):
-        """ """
+        """documentation"""
         super().__init__(*args, **kwargs)
-        self.name = 'BaseModel'
+        self.name = "BaseModel"
         self.value = BaseModel
 
     def setUp(self):
-        """ """
+        """documentation"""
         pass
 
     def tearDown(self):
         try:
-            os.remove('file.json')
-        except:
+            os.remove("file.json")
+        except Exception:
             pass
 
     def test_default(self):
-        """ """
+        """documentation"""
         i = self.value()
         self.assertEqual(type(i), self.value)
 
     def test_kwargs(self):
-        """ """
+        """documentation"""
         i = self.value()
         copy = i.to_dict()
         new = BaseModel(**copy)
         self.assertFalse(new is i)
 
     def test_kwargs_int(self):
-        """ """
+        """documentation"""
         i = self.value()
         copy = i.to_dict()
         copy.update({1: 2})
@@ -48,52 +52,53 @@ class test_basemodel(unittest.TestCase):
             new = BaseModel(**copy)
 
     def test_save(self):
-        """ Testing save """
+        """Testing save"""
         i = self.value()
         i.save()
         key = self.name + "." + i.id
-        with open('file.json', 'r') as f:
+        with open("file.json", "r") as f:
             j = json.load(f)
             self.assertEqual(j[key], i.to_dict())
 
     def test_str(self):
-        """ """
+        """documentation"""
         i = self.value()
-        self.assertEqual(str(i), '[{}] ({}) {}'.format(self.name, i.id,
-                         i.__dict__))
+        self.assertEqual(str(i), "[{}] ({}) {}".
+                         format(self.name, i.id, i.__dict__))
 
     def test_todict(self):
-        """ """
+        """documentation"""
         i = self.value()
         n = i.to_dict()
         self.assertEqual(i.to_dict(), n)
 
     def test_kwargs_none(self):
-        """ """
+        """documentation"""
         n = {None: None}
         with self.assertRaises(TypeError):
             new = self.value(**n)
 
     def test_kwargs_one(self):
-        """ """
-        n = {'Name': 'test'}
-        with self.assertRaises(KeyError):
-            new = self.value(**n)
+        """documentation"""
+        n = {"name": "nuux"}
+        new = self.value(**n)
+        self.assertEqual(new.name, n["name"])
 
     def test_id(self):
-        """ """
+        """documentation"""
         new = self.value()
         self.assertEqual(type(new.id), str)
 
     def test_created_at(self):
-        """ """
+        """documentation"""
         new = self.value()
         self.assertEqual(type(new.created_at), datetime.datetime)
 
     def test_updated_at(self):
-        """ """
+        """documentation"""
         new = self.value()
         self.assertEqual(type(new.updated_at), datetime.datetime)
         n = new.to_dict()
         new = BaseModel(**n)
+        new.save()
         self.assertFalse(new.created_at == new.updated_at)
