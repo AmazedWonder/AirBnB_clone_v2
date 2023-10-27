@@ -36,8 +36,6 @@ class BaseModel:
                 elif key != "__class__":
                     setattr(self, key, value)
 
-    
-
     def save(self):
         """Updates updated_at with current time when instance is changed"""
         self.updated_at = datetime.datetime.now()
