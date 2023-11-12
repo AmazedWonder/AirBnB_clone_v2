@@ -10,6 +10,7 @@ from datetime import datetime
 
 env.hosts = ['52.201.220.59', '54.146.61.93']
 
+
 @runs_once
 def do_pack():
     """"""
@@ -32,6 +33,7 @@ def do_pack():
     except Exception:
         output = None
     return output
+
 
 def do_deploy(archive_path):
     """Function for deploy"""
