@@ -2,6 +2,8 @@ This readme contains the following:
 # AirBnB clone - The Console
 # AirBnB clone - WebStatic
 # AirBnB clone - MYSQL
+# AirBnB clone - Deploy static
+### (DevOps, Python, SysAdmin, Scripting, CI/CD)
 
 <center> <h1>HBNB - The Console</h1> </center>
 
@@ -145,10 +147,12 @@ Usage: <class_name>.update(<_id>, <dictionary>)
 (hbnb) ["[User] (98bea5de-9cb0-4d78-8a9d-c4de03521c30) {'updated_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134362), 'name': 'Fred the Frog', 'age': 9, 'id': '98bea5de-9cb0-4d78-8a9d-c4de03521c30', 'created_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134343)}"]
 ```
 <br>
-
+```
+---
 <center> <h1>AirBnB - MYSQL</h1> </center>
 
 #How to test files
+```
 
 1. Bug free!
 This codebase contains many test cases.All unittests
@@ -462,5 +466,27 @@ amenity_id: b80aec52-d0c9-420a-8471-3254572954b6
   place_id: db549ae1-4500-4d0c-9b50-4b4978ed229e
 amenity_id: b80aec52-d0c9-420a-8471-3254572954b6
 guillaume@ubuntu:~/AirBnB_v2$ 
+```
+---
+# AirBnB clone - Deploy static
+
+---
+```
+For this project, these concepts were looked at:
+```
+[CI/CD](https://intranet.alxswe.com/concepts/43)
+[AirBnB clone](https://intranet.alxswe.com/concepts/74)
+```
+In this deployment project, I will be deploying your web_static work. I will use Fabric (for Python3). Fabric is a Python library and command-line tool for streamlining the use of SSH for application deployment or systems administration tasks. It provides a basic suite of operations for executing local or remote shell commands (normally or via sudo) and uploading/downloading files, as well as auxiliary functionality such as prompting the running user for input, or aborting execution. This concept is important: execute commands locally or remotely. Locally means in your laptop (physical laptop or inside your Vagrant), and Remotely means on your server(s). Fabric is taking care of all network connections (SSH, SCP etc.), it’s an easy tool for transferring, executing, etc. commands from locale to a remote server.
+
+```
+### Tasks
+
+| Tasks | Files | Description |
+| ----- | ----- | ------ |
+| 0: Prepare your web servers | [0-setup_web_static.sh](./0-setup_web_static.sh) |  Bash script that sets up your web servers for the deployment of web_static
+| 1: Compress before sending | [1-pack_web_static.py](./1-pack_web_static.py) | Fabric script that generates a .tgz archive from the contents of the web_static
+| 2:  Deploy archive! | [2-do_deploy_web_static.py](./2-do_deploy_web_static.py) | Fabric script (based on the file 1-pack_web_static.py) that distributes an archive to the web servers
+| 3:  Full deployment | [3-deploy_web_static.py](./3-deploy_web_static.py) | Fabric script (based on the file 2-do_deploy_web_static.py) that creates and distributes an archive to the web servers
 
 
