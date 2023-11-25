@@ -154,7 +154,8 @@ HTML
 CSS
 Front-end
 ```
-This project focuses on creating first web server in Python and making static HTML file dynamic by using objects stored in a file or database. 
+This project focuses on creating HTML/CSS. Creating the HTML of the application and the template of each object.
+HTML.
 
 ```
 ## Resources
