@@ -147,6 +147,57 @@ Usage: <class_name>.update(<_id>, <dictionary>)
 (hbnb) ["[User] (98bea5de-9cb0-4d78-8a9d-c4de03521c30) {'updated_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134362), 'name': 'Fred the Frog', 'age': 9, 'id': '98bea5de-9cb0-4d78-8a9d-c4de03521c30', 'created_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134343)}"]
 ```
 <br>
+
+```
+<center> <h1>AirBnB - Web static</h1> </center>
+HTML
+CSS
+Front-end
+```
+This project focuses on creating first web server in Python and making static HTML file dynamic by using objects stored in a file or database. 
+
+```
+## Resources
+
+* [Specifics on CSS Specificity](https://intranet.alxswe.com/rltoken/z_OTPFCjmhXJJi7KJqBCbQ)
+* [CSS SpeciFishity](https://intranet.alxswe.com/rltoken/orI812cozq-yd2769VdM_w)
+* [Introduction to HTML](https://intranet.alxswe.com/rltoken/okP4V3RxFXHkEcQo19AnuQ)
+* [CSS](https://intranet.alxswe.com/rltoken/Ir8Ka59FO6Z_vJQ-gkSG_w)
+* [MDN](https://intranet.alxswe.com/rltoken/BpSXtcWOGH0UT4XLCoQyJg)
+* [center boxes](https://intranet.alxswe.com/rltoken/Tlje4XYwyZbUfHkQWGi1WQ)
+
+
+## Tasks
+
+| Task | File | Description |
+| ---- | ---- |
+| 0. Inline styling | [0-index.html](./0-index.html) | HTML page that displays a header and a footer | 
+| 1. Head styling | [1-index.html](./1-index.html) | HTML page that displays a header and a footer by using the style tag in the head tag (same as 0-index.html) |
+| 2. CSS files | [2-index.html](./2-index.html), [styles/2-common.css](./styles/2-common.css), [styles/2-header.css](./styles/2-header.css), [styles/2-footer.css](./styles/2-footer.css) | HTML page that displays a header and a footer by using CSS files (same as 1-index.html) |
+| 3. Zoning done! | [3-index.html](./3-index.html), [styles/3-common.css](./styles/3-common.css), [styles/3-header.css](./styles/3-header.css), [styles/3-footer.css](./styles/3-footer.css), [images/](./images/) | HTML page that displays a header and footer by using CSS files (same as 2-index.html) |
+| 4. Search! | [4-index.html](./4-index.html), [styles/4-common.css](./styles/4-common.css), [styles/3-header.css](./styles/3-header.css), [styles/3-footer.css](./styles/3-footer.css), [styles/4-filters.css](./styles/4-filters.css), [images/](./images/) | HTML page that displays a header, footer and a filters box with a search button.
+
+Layout: (based on 3-index.html) |
+| 5. More filters | [5-index.html](./5-index.html), [styles/4-common.css](./styles/4-common.css), [styles/3-header.css](./styles/3-header.css), [styles/3-footer.css](./styles/3-footer.css), [styles/5-filters.css](./styles/5-filters.css), [images/](./images/) | HTML page that displays a header, footer and a filters box.
+
+Layout: (based on 4-index.html) |
+| 6. It's (h)over | [6-index.html](./6-index.html), [styles/4-common.css](./styles/4-common.css), [styles/3-header.css](./styles/3-header.css), [styles/3-footer.css](./styles/3-footer.css), [styles/6-filters.css](./styles/6-filters.css), [images/](./images/) | HTML page that displays a header, footer and a filters box with dropdown.
+
+Layout: (based on 5-index.html) |
+| 7. Display results | [7-index.html](./7-index.html), [styles/4-common.css](./styles/4-common.css), [styles/3-header.css](./styles/3-header.css), [styles/3-footer.css](./styles/3-footer.css), [styles/6-filters.css](./styles/6-filters.css), [styles/7-places.css](./styles/7-places.css), [images/](./images/) | HTML page that displays a header, footer, a filters box with dropdown and results.
+
+Layout: (based on 6-index.html) |
+| 8. More details | [8-index.html](./8-index.html), [styles/4-common.css](./styles/4-common.css), [styles/3-header.css](./styles/3-header.css), [styles/3-footer.css](./styles/3-footer.css), [styles/6-filters.css](./styles/6-filters.css), [styles/8-places.css](./styles/8-places.css), [images/](./images/) | HTML page that displays a header, a footer, a filter box (dropdown list) and the result of the search.
+
+Layout: (based on 7-index.html) |
+| 9. Full details | [100-index.html](./100-index.html), [styles/4-common.css](./styles/4-common.css), [styles/3-header.css](./styles/3-header.css), [styles/3-footer.css](./styles/3-footer.css), [styles/6-filters.css](./styles/6-filters.css), [styles/100-places.css](./styles/100-places.css), [images/](./images/) | HTML page that displays a header, footer, a filters box with dropdown and results.
+
+Layout: (based on 8-index.html) |
+| 10. Flex | [101-index.html](./101-index.html), [styles/4-common.css](./styles/4-common.css), [styles/3-header.css](./styles/3-header.css), [styles/3-footer.css](./styles/3-footer.css), [styles/6-filters.css](./styles/6-filters.css), [styles/101-places.css](./styles/101-places.css), [images/](./images/) | Improved the Places section by using Flexible boxes for all Place articles [Flexbox Froggy](https://intranet.alxswe.com/rltoken/PZz46Gkdj5Mo9-AWERPhQA) |
+| 11. Responsive design | [102-index.html](./102-index.html), [styles/102-common.css](./styles/102-common.css), [styles/102-header.css](./styles/102-header.css), [styles/102-footer.css](./styles/102-footer.css), [styles/102-filters.css](./styles/102-filters.css), [styles/102-places.css](./styles/102-places.css), [images/](./images/) | Improved the page by adding [responsive design](https://intranet.alxswe.com/rltoken/9mRhZcLRxmsuCyF8q7S8Ww) to display correctly in mobile or small screens. |
+| 12. Accessibility | [103-index.html](./103-index.html), [styles/103-common.css](./styles/103-common.css), [styles/103-header.css](./styles/103-header.css), [styles/103-footer.css](./styles/103-footer.css), [styles/103-filters.css](./styles/103-filters.css), [styles/103-places.css](./styles/103-places.css), [images/](./images/) | Improved the page by adding [Accessibility support](https://intranet.alxswe.com/rltoken/JO-zonPvzBUfqpYRZDAtug) |
+
+```
 ```
 ---
 <center> <h1>AirBnB - MYSQL</h1> </center>
